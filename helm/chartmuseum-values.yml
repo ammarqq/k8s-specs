@@ -19,5 +19,15 @@ ingress:
     ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
   hosts:
-  - name: cm.127.0.0.1.nip.io
+  - name: chartrep.psamman.com
     path: /  
+
+# helm install stable/chartmuseum \
+# --namespace charts \
+# --name cm \
+# --values helm/chartmuseum-values.yml \
+# --set "ingress.hosts[0].name=cm.psamman.com" \
+# --set env.secret.BASIC_AUTH_USER=admin \
+# --set env.secret.BASIC_AUTH_PASS=admin
+
+#for gui goto monocular0values.yml

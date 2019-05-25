@@ -18,3 +18,11 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /
     ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+
+
+
+# helm install monocular/monocular \
+# --namespace charts \
+# --name monocular \
+# --values helm/monocular-values.yml \
+# --set ingress.hosts={mono.psamman.com}
